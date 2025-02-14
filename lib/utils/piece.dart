@@ -259,10 +259,10 @@ class Piece {
             break;
           case 1:
             newPosition = [
-              position[1] - rowLength,
-              position[1],
-              position[1] + 1,
-              position[1] + rowLength + 1,
+              position[0] - rowLength,
+              position[0],
+              position[0] + 1,
+              position[0] + rowLength + 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -283,10 +283,10 @@ class Piece {
             break;
           case 3:
             newPosition = [
-              position[1] - rowLength,
-              position[1],
-              position[1] + 1,
-              position[1] + rowLength + 1,
+              position[0] - rowLength,
+              position[0],
+              position[0] + 1,
+              position[0] + rowLength + 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -299,10 +299,10 @@ class Piece {
         switch (rotateState) {
           case 0:
             newPosition = [
-              position[1] + rowLength - 2,
+              position[0] + rowLength - 2,
               position[1],
-              position[1] + rowLength - 1,
-              position[1] + 1,
+              position[2] + rowLength - 1,
+              position[3] + 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -311,10 +311,10 @@ class Piece {
             break;
           case 1:
             newPosition = [
-              position[1] - rowLength + 2,
+              position[0] - rowLength + 2,
               position[1],
-              position[1] - rowLength + 1,
-              position[1] - 1,
+              position[2] - rowLength + 1,
+              position[3] - 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -323,10 +323,10 @@ class Piece {
             break;
           case 2:
             newPosition = [
-              position[1] + rowLength - 2,
+              position[0] + rowLength - 2,
               position[1],
-              position[1] + rowLength - 1,
-              position[1] + 1,
+              position[2] + rowLength - 1,
+              position[3] + 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -335,10 +335,10 @@ class Piece {
             break;
           case 3:
             newPosition = [
-              position[1] - rowLength + 2,
+              position[0] - rowLength + 2,
               position[1],
-              position[1] - rowLength + 1,
-              position[1] - 1,
+              position[2] - rowLength + 1,
+              position[3] - 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -351,10 +351,10 @@ class Piece {
         switch (rotateState) {
           case 0:
             newPosition = [
-              position[1] - rowLength,
-              position[1],
-              position[1] + 1,
-              position[1] + rowLength,
+              position[2] - rowLength,
+              position[2],
+              position[2] + 1,
+              position[2] + rowLength,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;
@@ -387,10 +387,10 @@ class Piece {
             break;
           case 3:
             newPosition = [
-              position[1] - rowLength,
-              position[1] - 1,
-              position[1],
-              position[1] + 1,
+              position[2] - rowLength,
+              position[2] - 1,
+              position[2],
+              position[2] + 1,
             ];
             if (piecePositionIsValid(newPosition)) {
               position = newPosition;

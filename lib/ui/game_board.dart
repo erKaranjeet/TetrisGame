@@ -48,7 +48,7 @@ class _GameBoardState extends State<GameBoard> {
     currentPiece.initializePiece();
 
     //Refresh frame rate
-    Duration frameRate = const Duration(milliseconds: 800);
+    Duration frameRate = const Duration(milliseconds: 600);
     gameLoop(frameRate);
   }
 
@@ -129,6 +129,12 @@ class _GameBoardState extends State<GameBoard> {
       //Check if the piece is out of bounds (Either too low or too far to the left or right)
       if (row >= colLength || col < 0 || col >= rowLength) {
         return true;
+      }
+
+
+      // Check if the position is already occupied
+      if (row >= 0 && gameBoard[row][col] != null) {
+        return true;  // Collision detected
       }
     }
 
